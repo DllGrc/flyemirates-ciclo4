@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import * as cryptoJS from 'crypto-js';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
