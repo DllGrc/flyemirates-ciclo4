@@ -1,1 +1,50 @@
-<p>edit works!</p>
+<div class="container">
+    <h3 class="center-align">Editar Vuelo</h3>
+
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
+        <input formControlName="id" type="hidden" class="validate">
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="fechaInicio" type="date" class="validate">
+                <label class="active" for="fechaInicio">Fecha Inicio</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="horaInicio" type="time" class="validate">
+                <label class="active" for="horaInicio">Hora Inicio</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="fechaFin" type="date" class="validate">
+                <label class="active" for="fechaFin">Fecha Fin</label>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="horaFin" type="time" class="validate">
+                <label class="active" for="horaFin">Hora Fin</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s9">
+                <input formControlName="nombrePiloto" type="text" class="validate">
+                <label class="active" for="nombrePiloto">Nombre Piloto</label>
+            </div>
+            <div class="input-field col s3">
+                <input formControlName="asientosVendidos" type="number" class="validate">
+                <label class="active" for="asientosVendidos">Asientos Vendidos</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input formControlName="ruta" type="text" class="validate">
+                <label class="active" for="ruta">Ruta</label>
+            </div>
+        </div>
+
+        <div class="row center-align">
+            <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit"
+                name="action">Enviar
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>
